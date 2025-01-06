@@ -19,73 +19,70 @@ const Auth = () => {
 
     try {
       if (isSignUp) {
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: {
-              username,
+        // For test account, directly sign up and sign in
+        if (email === "test@test.com" && password === "Test1234") {
+          const { error: signUpError } = await supabase.auth.signUp({
+            email,
+            password,
+            options: {
+              data: {
+                username,
+              },
             },
-          },
-        });
-        
-        if (error) throw error;
-        
-        // Check if the user needs to verify their email
-        if (data?.user?.identities?.length === 0) {
-          toast({
-            title: "Account already exists",
-            description: "Please try logging in or reset your password.",
-            variant: "destructive",
           });
-        } else {
-          if (email === "test@test.com") {
-            // For test account, wait a moment before signing in
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            
-            const { error: signInError } = await supabase.auth.signInWithPassword({
-              email,
-              password,
-            });
-            
-            if (!signInError) {
-              toast({
-                title: "Success",
-                description: "Test account created and signed in successfully.",
-              });
-              navigate("/");
-              return;
-            }
-          } else {
+
+          if (signUpError) throw signUpError;
+
+          // Wait a moment before signing in
+          await new Promise(resolve => setTimeout(resolve, 1000));
+
+          const { error: signInError } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+          });
+
+          if (!signInError) {
             toast({
-              title: "Check your email",
-              description: "We sent you a confirmation link. Please verify your email before logging in.",
+              title: "Success",
+              description: "Test account created and signed in successfully.",
             });
+            navigate("/");
+            return;
           }
+        } else {
+          const { error } = await supabase.auth.signUp({
+            email,
+            password,
+            options: {
+              data: {
+                username,
+              },
+            },
+          });
+
+          if (error) throw error;
+
+          toast({
+            title: "Check your email",
+            description: "We sent you a confirmation link. Please verify your email before logging in.",
+          });
         }
       } else {
+        // Handle sign in
         const { error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
-        
+
         if (signInError) {
-          if (signInError.message.includes("Email not confirmed") && email !== "test@test.com") {
-            toast({
-              title: "Email not verified",
-              description: "Please check your email and verify your account before logging in.",
-              variant: "destructive",
-            });
-          } else {
-            toast({
-              variant: "destructive",
-              title: "Invalid credentials",
-              description: "Please check your email and password.",
-            });
-          }
+          toast({
+            variant: "destructive",
+            title: "Invalid credentials",
+            description: "Please check your email and password.",
+          });
           throw signInError;
         }
-        
+
         navigate("/");
       }
     } catch (error: any) {
