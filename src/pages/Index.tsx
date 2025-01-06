@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { CallToAction } from "@/components/CallToAction";
 import { FeaturedSection } from "@/components/FeaturedSection";
@@ -9,7 +8,6 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-cream font-inter">
-      <Navbar />
       <HeroSection />
       <CallToAction />
       <FeaturedSection />
