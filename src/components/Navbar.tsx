@@ -11,7 +11,7 @@ export function Navbar() {
             <img 
               src="/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png" 
               alt="Granos Logo" 
-              className="h-12"
+              className="h-24"
             />
           </Link>
           <div className="flex items-center space-x-4">
