@@ -3,21 +3,21 @@ import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav className="fixed w-full bg-cream/80 backdrop-blur-md z-50 border-b border-espresso/10">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Coffee className="h-6 w-6 text-coffee" />
-            <span className="font-fraunces text-xl font-semibold text-coffee">Grano</span>
+          <div className="flex items-center space-x-3">
+            <Coffee className="h-8 w-8 text-espresso" />
+            <span className="font-playfair text-2xl font-semibold text-espresso">Grano</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-coffee transition-colors">Discover</a>
-            <a href="#" className="text-gray-600 hover:text-coffee transition-colors">Roasters</a>
-            <a href="#" className="text-gray-600 hover:text-coffee transition-colors">Journal</a>
-            <a href="#" className="text-gray-600 hover:text-coffee transition-colors">About</a>
+            <a href="#" className="font-inter text-slate hover:text-espresso transition-colors">Discover</a>
+            <a href="#" className="font-inter text-slate hover:text-espresso transition-colors">Roasters</a>
+            <a href="#" className="font-inter text-slate hover:text-espresso transition-colors">Journal</a>
+            <a href="#" className="font-inter text-slate hover:text-espresso transition-colors">About</a>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-coffee">
+            <Button variant="ghost" size="icon" className="text-espresso hover:bg-espresso/10">
               <User className="h-5 w-5" />
             </Button>
           </div>

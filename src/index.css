@@ -1,36 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 20% 20%;
+    --background: 60 33% 96%;
+    --foreground: 25 24% 33%;
     
     --card: 0 0% 100%;
-    --card-foreground: 20 20% 20%;
+    --card-foreground: 25 24% 33%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 20 20% 20%;
+    --popover-foreground: 25 24% 33%;
     
-    --primary: 25 35% 25%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 25 24% 33%;
+    --primary-foreground: 60 33% 96%;
     
-    --secondary: 30 30% 96%;
-    --secondary-foreground: 25 35% 25%;
+    --secondary: 60 33% 96%;
+    --secondary-foreground: 25 24% 33%;
     
-    --muted: 30 30% 96%;
+    --muted: 60 33% 96%;
     --muted-foreground: 25 5% 45%;
     
-    --accent: 25 35% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 24% 33%;
+    --accent-foreground: 60 33% 96%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 60 33% 96%;
 
     --border: 20 5% 90%;
     --input: 20 5% 90%;
-    --ring: 25 35% 25%;
+    --ring: 25 24% 33%;
 
     --radius: 0.5rem;
   }
@@ -41,6 +43,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-cream text-espresso antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

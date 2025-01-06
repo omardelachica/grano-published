@@ -19,15 +19,14 @@ export default {
     },
     extend: {
       colors: {
-        coffee: {
-          DEFAULT: "#4A3428",
-          light: "#C17F59",
-          dark: "#2C1810",
-        },
-        cream: {
-          DEFAULT: "#F5F1E8",
-          dark: "#E8E4DB",
-        },
+        espresso: "#6F4E37",
+        cream: "#F5F5DC",
+        forest: "#228B22",
+        slate: "#708090",
+        orange: "#CC5500",
+        gold: "#D4AF37",
+        teal: "#008080",
+        burgundy: "#800020",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -63,8 +62,8 @@ export default {
         },
       },
       fontFamily: {
-        fraunces: ["Fraunces", "serif"],
         inter: ["Inter", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       keyframes: {
         "accordion-down": {
