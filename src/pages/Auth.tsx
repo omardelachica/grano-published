@@ -22,7 +22,7 @@ const Auth = () => {
 
     try {
       if (isSignUp) {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: {
@@ -32,24 +32,47 @@ const Auth = () => {
           },
         });
         if (error) throw error;
-        toast({
-          title: "Check your email",
-          description: "We sent you a confirmation link.",
-        });
+        
+        // Check if the user needs to verify their email
+        if (data?.user?.identities?.length === 0) {
+          toast({
+            title: "Account already exists",
+            description: "Please try logging in or reset your password.",
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Check your email",
+            description: "We sent you a confirmation link. Please verify your email before logging in.",
+          });
+        }
       } else {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
-        if (error) throw error;
+        
+        if (signInError) {
+          if (signInError.message.includes("Email not confirmed")) {
+            toast({
+              title: "Email not verified",
+              description: "Please check your email and verify your account before logging in.",
+              variant: "destructive",
+            });
+          } else {
+            toast({
+              variant: "destructive",
+              title: "Invalid credentials",
+              description: "Please check your email and password.",
+            });
+          }
+          throw signInError;
+        }
+        
         navigate("/");
       }
     } catch (error: any) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: error.message,
-      });
+      console.error("Auth error:", error);
     } finally {
       setIsLoading(false);
     }
