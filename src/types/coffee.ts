@@ -17,7 +17,10 @@ export interface CoffeeProduct {
   rating: number;
   description: string;
   price: number;
+  weightInGrams: number;
+  pricePerUnit: string;
   imageUrl: string;
+  roaster: string;
   reviews: Review[];
 }
 

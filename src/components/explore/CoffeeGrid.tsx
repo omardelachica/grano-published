@@ -24,13 +24,17 @@ export function CoffeeGrid({ products }: CoffeeGridProps) {
               </div>
             </CardHeader>
             <CardContent className="p-4">
-              <h3 className="font-playfair text-xl text-espresso mb-2">{product.name}</h3>
+              <h3 className="font-playfair text-xl text-espresso mb-1">{product.name}</h3>
+              <p className="text-sm text-muted-foreground mb-2">by {product.roaster}</p>
               <p className="text-sm text-muted-foreground mb-2">{product.origin}</p>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 mb-2">
                 <Star className="w-4 h-4 fill-gold text-gold" />
                 <span className="text-sm font-medium">{product.rating.toFixed(1)}</span>
               </div>
-              <p className="mt-2 font-medium">${product.price.toFixed(2)}</p>
+              <div className="flex justify-between items-center">
+                <p className="font-medium">${product.price.toFixed(2)}</p>
+                <p className="text-sm text-muted-foreground">{product.pricePerUnit}</p>
+              </div>
             </CardContent>
           </Card>
         </Link>

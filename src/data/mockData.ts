@@ -15,7 +15,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.5,
     description: 'A bright and complex coffee with distinctive floral and citrus notes.',
     price: 18.99,
+    weightInGrams: 500,
+    pricePerUnit: '$37.98/kg',
     imageUrl: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e',
+    roaster: 'Artisan Coffee Roasters',
     reviews: [
       {
         id: '1',
@@ -41,7 +44,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.3,
     description: 'A well-balanced coffee with sweet chocolate and caramel notes.',
     price: 16.99,
+    weightInGrams: 500,
+    pricePerUnit: '$33.98/kg',
     imageUrl: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd',
+    roaster: 'Mountain Peak Coffee Co.',
     reviews: [
       {
         id: '2',
@@ -67,7 +73,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.2,
     description: 'A smooth and balanced coffee with rich chocolate and nutty notes, complemented by subtle fruit undertones.',
     price: 15.99,
+    weightInGrams: 500,
+    pricePerUnit: '$31.98/kg',
     imageUrl: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9',
+    roaster: 'Brazilian Coffee Masters',
     reviews: [
       {
         id: '3',
@@ -92,7 +101,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.4,
     description: 'A rich and full-bodied espresso blend with intense dark chocolate notes and aromatic spices.',
     price: 25.00,
+    weightInGrams: 500,
+    pricePerUnit: '$50.00/kg',
     imageUrl: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04',
+    roaster: 'Italian Coffee Roasters',
     reviews: [
       {
         id: '4',
@@ -119,7 +131,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.7,
     description: 'A bright and complex Ethiopian coffee with vibrant berry notes and floral undertones.',
     price: 53.00,
+    weightInGrams: 500,
+    pricePerUnit: '$106.00/kg',
     imageUrl: 'https://images.unsplash.com/photo-1452960962994-acf4fd70b632',
+    roaster: 'Ethiopian Coffee Co.',
     reviews: [
       {
         id: '5',
@@ -145,7 +160,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.3,
     description: 'A bold and earthy Indonesian coffee with rich chocolate notes and herbal undertones.',
     price: 14.95,
+    weightInGrams: 500,
+    pricePerUnit: '$29.90/kg',
     imageUrl: 'https://images.unsplash.com/photo-1518877593221-1f28583780b4',
+    roaster: 'Indonesian Coffee Traders',
     reviews: [
       {
         id: '6',
@@ -171,7 +189,10 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.5,
     description: 'A well-balanced Guatemalan coffee featuring rich chocolate and caramel notes with a nutty finish.',
     price: 19.99,
+    weightInGrams: 500,
+    pricePerUnit: '$39.98/kg',
     imageUrl: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac',
+    roaster: 'Guatemalan Coffee Co.',
     reviews: [
       {
         id: '7',
