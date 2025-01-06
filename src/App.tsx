@@ -4,6 +4,7 @@ import Auth from './pages/Auth';
 import Explore from './pages/Explore';
 import CoffeeDetail from './pages/CoffeeDetail';
 import RoasterProfile from './pages/RoasterProfile';
+import RoastersCatalogue from './pages/RoastersCatalogue';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/toaster';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/explore" element={<Explore />} />
             <Route path="/coffee/:id" element={<CoffeeDetail />} />
             <Route path="/roaster/:roasterId" element={<RoasterProfile />} />
+            <Route path="/roasters" element={<RoastersCatalogue />} />
           </Routes>
         </main>
         <Footer />
