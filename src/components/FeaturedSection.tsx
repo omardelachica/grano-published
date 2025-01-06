@@ -2,10 +2,12 @@ import { FeaturedCard } from "@/components/FeaturedCard";
 
 export const FeaturedSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container">
-        <h2 className="font-playfair text-3xl text-espresso mb-12 text-center">Featured Experiences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="container px-4">
+        <h2 className="font-playfair text-2xl md:text-3xl text-espresso mb-8 md:mb-12 text-center">
+          Featured Experiences
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <FeaturedCard
             title="Ethiopian Yirgacheffe"
             description="Floral and bright with notes of bergamot and jasmine"

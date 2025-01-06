@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Users } from 'lucide-react';
+import { Users, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="border-b">
       <div className="container mx-auto px-4 py-3">
@@ -14,7 +17,21 @@ export function Navbar() {
               className="h-24"
             />
           </Link>
-          <div className="flex items-center space-x-4">
+          
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-espresso" />
+            ) : (
+              <Menu className="h-6 w-6 text-espresso" />
+            )}
+          </button>
+
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center space-x-4">
             <Link to="/explore">
               <Button variant="ghost">Explore</Button>
             </Link>
@@ -29,6 +46,26 @@ export function Navbar() {
             </Link>
           </div>
         </div>
+
+        {/* Mobile navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 space-y-2">
+            <Link to="/explore" className="block">
+              <Button variant="ghost" className="w-full justify-start">
+                Explore
+              </Button>
+            </Link>
+            <Link to="/roasters" className="block">
+              <Button variant="ghost" className="w-full justify-start">
+                <Users className="w-4 h-4 mr-2" />
+                Producers
+              </Button>
+            </Link>
+            <Link to="/auth" className="block">
+              <Button className="w-full justify-start">Sign In</Button>
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
