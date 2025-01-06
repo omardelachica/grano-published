@@ -3,7 +3,6 @@ import { CallToAction } from "@/components/CallToAction";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SustainabilitySection } from "@/components/SustainabilitySection";
-import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -13,7 +12,6 @@ const Index = () => {
       <FeaturedSection />
       <TestimonialsSection />
       <SustainabilitySection />
-      <Footer />
     </div>
   );
 };
