@@ -45,9 +45,10 @@ export default function RoastersCatalogue() {
         </p>
       </div>
 
-      {/* Filters */}
-      <div className="flex gap-4 mb-8 justify-center">
+      {/* Filters - Updated for mobile responsiveness */}
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-8 items-center justify-center">
         <Button 
+          className="w-full sm:w-auto"
           variant={activeFilter === 'all' ? 'default' : 'outline'}
           onClick={() => setActiveFilter('all')}
         >
@@ -55,6 +56,7 @@ export default function RoastersCatalogue() {
           All Producers
         </Button>
         <Button 
+          className="w-full sm:w-auto"
           variant={activeFilter === 'top-sellers' ? 'default' : 'outline'}
           onClick={() => setActiveFilter('top-sellers')}
         >
@@ -62,6 +64,7 @@ export default function RoastersCatalogue() {
           Top Sellers
         </Button>
         <Button 
+          className="w-full sm:w-auto"
           variant={activeFilter === 'sustainable' ? 'default' : 'outline'}
           onClick={() => setActiveFilter('sustainable')}
         >
