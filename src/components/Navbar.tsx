@@ -1,4 +1,4 @@
-import { Coffee, User } from "lucide-react";
+import { User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -7,8 +7,11 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Coffee className="h-8 w-8 text-espresso" />
-            <span className="font-playfair text-2xl font-semibold text-espresso">Grano</span>
+            <img 
+              src="/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png" 
+              alt="Grano" 
+              className="h-8"
+            />
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="font-inter text-slate hover:text-espresso transition-colors">Discover</a>
