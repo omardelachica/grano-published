@@ -10,7 +10,7 @@ export const Navbar = () => {
             <img 
               src="/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png" 
               alt="Grano" 
-              className="h-8"
+              className="h-12 w-auto"
             />
           </div>
           <div className="hidden md:flex items-center space-x-8">
