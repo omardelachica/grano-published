@@ -77,7 +77,7 @@ const Auth = () => {
           <img
             src="/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png"
             alt="Grano"
-            className="mx-auto h-24 w-auto"
+            className="mx-auto h-32 w-auto"
           />
           <h2 className="mt-6 text-3xl font-playfair font-bold text-espresso">
             {isSignUp ? "Create your account" : "Welcome back"}
