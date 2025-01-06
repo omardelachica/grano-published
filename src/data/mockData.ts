@@ -15,7 +15,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.5,
     description: 'A bright and complex coffee with distinctive floral and citrus notes.',
     price: 18.99,
-    imageUrl: '/placeholder.svg',
+    imageUrl: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e',
     reviews: [
       {
         id: '1',
@@ -41,7 +41,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.3,
     description: 'A well-balanced coffee with sweet chocolate and caramel notes.',
     price: 16.99,
-    imageUrl: '/placeholder.svg',
+    imageUrl: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd',
     reviews: [
       {
         id: '2',
