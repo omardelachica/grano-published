@@ -67,7 +67,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.2,
     description: 'A smooth and balanced coffee with rich chocolate and nutty notes, complemented by subtle fruit undertones.',
     price: 15.99,
-    imageUrl: '/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png',
+    imageUrl: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9',
     reviews: [
       {
         id: '3',
@@ -92,7 +92,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.4,
     description: 'A rich and full-bodied espresso blend with intense dark chocolate notes and aromatic spices.',
     price: 25.00,
-    imageUrl: '/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png',
+    imageUrl: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04',
     reviews: [
       {
         id: '4',
@@ -119,7 +119,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.7,
     description: 'A bright and complex Ethiopian coffee with vibrant berry notes and floral undertones.',
     price: 53.00,
-    imageUrl: '/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png',
+    imageUrl: 'https://images.unsplash.com/photo-1452960962994-acf4fd70b632',
     reviews: [
       {
         id: '5',
@@ -145,7 +145,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.3,
     description: 'A bold and earthy Indonesian coffee with rich chocolate notes and herbal undertones.',
     price: 14.95,
-    imageUrl: '/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png',
+    imageUrl: 'https://images.unsplash.com/photo-1518877593221-1f28583780b4',
     reviews: [
       {
         id: '6',
@@ -171,7 +171,7 @@ export const mockCoffeeProducts: CoffeeProduct[] = [
     rating: 4.5,
     description: 'A well-balanced Guatemalan coffee featuring rich chocolate and caramel notes with a nutty finish.',
     price: 19.99,
-    imageUrl: '/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png',
+    imageUrl: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac',
     reviews: [
       {
         id: '7',
