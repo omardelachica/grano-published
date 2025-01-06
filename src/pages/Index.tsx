@@ -42,7 +42,7 @@ const Index = () => {
               <span>Explore Coffee</span>
             </Button>
             <Button 
-              className="h-auto py-6 bg-forest hover:bg-forest/90 flex flex-col items-center gap-3"
+              className="h-auto py-6 bg-burgundy hover:bg-burgundy/90 flex flex-col items-center gap-3"
             >
               <Users className="h-6 w-6" />
               <span>Join the Community</span>
@@ -57,6 +57,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Rest of the sections */}
       {/* Featured Roasters & Coffee */}
       <section className="py-20 bg-white">
         <div className="container">
