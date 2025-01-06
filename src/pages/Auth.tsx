@@ -31,6 +31,7 @@ const Auth = () => {
             },
           },
         });
+        
         if (error) throw error;
         
         // Check if the user needs to verify their email
@@ -42,12 +43,19 @@ const Auth = () => {
           });
         } else {
           if (email === "test@test.com") {
-            // For test account, proceed directly to sign in
+            // For test account, wait a moment before signing in
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
             const { error: signInError } = await supabase.auth.signInWithPassword({
               email,
               password,
             });
+            
             if (!signInError) {
+              toast({
+                title: "Success",
+                description: "Test account created and signed in successfully.",
+              });
               navigate("/");
               return;
             }
