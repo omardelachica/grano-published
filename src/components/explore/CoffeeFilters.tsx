@@ -62,7 +62,7 @@ export function CoffeeFilters({ filters, onFilterChange }: CoffeeFiltersProps) {
               <SelectValue placeholder="Select roast profile" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Roasts</SelectItem>
+              <SelectItem value="all">All Roasts</SelectItem>
               {ROAST_PROFILES.map((roast) => (
                 <SelectItem key={roast} value={roast}>
                   {roast}
