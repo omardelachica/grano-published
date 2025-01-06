@@ -8,7 +8,11 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="font-playfair text-4xl text-espresso">
-            Coffee Craft
+            <img 
+              src="/lovable-uploads/b8d7326a-7a29-47b6-85f3-e89e65e462dd.png" 
+              alt="Granos Logo" 
+              className="h-12"
+            />
           </Link>
           <div className="flex items-center space-x-4">
             <Link to="/explore">
