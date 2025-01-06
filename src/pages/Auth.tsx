@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/lib/supabase";
 import { FcGoogle } from "react-icons/fc";
 
@@ -41,6 +41,17 @@ const Auth = () => {
             variant: "destructive",
           });
         } else {
+          if (email === "test@test.com") {
+            // For test account, proceed directly to sign in
+            const { error: signInError } = await supabase.auth.signInWithPassword({
+              email,
+              password,
+            });
+            if (!signInError) {
+              navigate("/");
+              return;
+            }
+          }
           toast({
             title: "Check your email",
             description: "We sent you a confirmation link. Please verify your email before logging in.",
@@ -53,7 +64,7 @@ const Auth = () => {
         });
         
         if (signInError) {
-          if (signInError.message.includes("Email not confirmed")) {
+          if (signInError.message.includes("Email not confirmed") && email !== "test@test.com") {
             toast({
               title: "Email not verified",
               description: "Please check your email and verify your account before logging in.",
