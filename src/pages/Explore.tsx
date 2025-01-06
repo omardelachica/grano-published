@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CoffeeFilters } from '@/components/explore/CoffeeFilters';
 import { CoffeeGrid } from '@/components/explore/CoffeeGrid';
 import { CoffeeProduct, FilterState } from '@/types/coffee';
+import { mockCoffeeProducts } from '@/data/mockData';
 
 const initialFilters: FilterState = {
   origin: '',
@@ -10,33 +11,6 @@ const initialFilters: FilterState = {
   brewingMethods: [],
   minRating: 0,
 };
-
-// Temporary mock data - replace with actual data from your backend
-const mockCoffeeProducts: CoffeeProduct[] = [
-  {
-    id: '1',
-    name: 'Ethiopian Yirgacheffe',
-    origin: 'Ethiopia',
-    roastProfile: 'Light',
-    flavorNotes: [{ id: '1', name: 'Floral' }, { id: '2', name: 'Citrus' }],
-    brewingMethods: ['Pour Over', 'Aeropress'],
-    rating: 4.5,
-    description: 'A bright and complex coffee with distinctive floral and citrus notes.',
-    price: 18.99,
-    imageUrl: '/placeholder.svg',
-    reviews: [
-      {
-        id: '1',
-        userId: '1',
-        username: 'coffeelover',
-        rating: 5,
-        comment: 'Absolutely wonderful coffee!',
-        createdAt: new Date().toISOString(),
-      },
-    ],
-  },
-  // Add more mock products as needed
-];
 
 export default function Explore() {
   const [filters, setFilters] = useState<FilterState>(initialFilters);
