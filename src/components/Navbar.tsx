@@ -7,7 +7,7 @@ export function Navbar() {
     <nav className="border-b">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-playfair text-2xl text-espresso">
+          <Link to="/" className="font-playfair text-4xl text-espresso">
             Coffee Craft
           </Link>
           <div className="flex items-center space-x-4">
