@@ -1,6 +1,6 @@
 export type RoastProfile = 'Light' | 'Medium' | 'Medium-Dark' | 'Dark';
 
-export type BrewingMethod = 'Pour Over' | 'Espresso' | 'French Press' | 'Cold Brew' | 'Aeropress';
+export type BrewingMethod = 'Pour Over' | 'Espresso' | 'French Press' | 'Cold Brew' | 'Aeropress' | 'Drip Coffee' | 'Moka Pot' | 'Chemex';
 
 export interface FlavorNote {
   id: string;

@@ -19,7 +19,7 @@ interface CoffeeFiltersProps {
 }
 
 const ROAST_PROFILES: RoastProfile[] = ['Light', 'Medium', 'Medium-Dark', 'Dark'];
-const BREWING_METHODS: BrewingMethod[] = ['Pour Over', 'Espresso', 'French Press', 'Cold Brew', 'Aeropress'];
+const BREWING_METHODS: BrewingMethod[] = ['Pour Over', 'Espresso', 'French Press', 'Cold Brew', 'Aeropress', 'Drip Coffee', 'Moka Pot', 'Chemex'];
 const FLAVOR_NOTES = ['Floral', 'Fruity', 'Nutty', 'Chocolate', 'Caramel', 'Citrus'];
 
 export function CoffeeFilters({ filters, onFilterChange }: CoffeeFiltersProps) {
